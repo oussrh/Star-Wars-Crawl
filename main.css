@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'stars';
+    src: url("fonts/soloist1.ttf") ;
+   }
+
+*{margin: 0; padding: 0;overflow: hidden;}
+
+body{background-image: url(img/stars.gif);}
+
+
+h1{
+    font: bold 50px arial,sans-serif ;
+    color: aqua;
+    text-align: center;
+    margin-top: 200px;
+    opacity: 0;
+}   
+
+img{
+    width: 0px;
+    display: block;
+    margin: 10px auto 0 auto;}
+
+section{
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 600px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin: 100px auto 0 auto;
+    overflow: hidden;
+    bottom:0;
+    transform:perspective(80px) rotateX(10deg);
+}
+
+p{
+ margin-top: 55%; 
+text-align: center;
+font: 50px stars,sans-serif;
+color: rgb(212, 212, 69);
+text-align: justify;}
+
+img {
+    animation-delay: 8s;
+    animation-duration: 20s;
+    animation-name: moveEndisapear;
+  }
+@keyframes moveEndisapear {
+    from {
+    width: 500px;
+    
+    }
+
+    75%{width: 100px;}
+  
+    to {
+        
+    }
+  }
+
+/*  */
+
+h1 {
+    animation-duration: 10s;
+    animation-name: disapear;
+  }
+@keyframes disapear {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+        opacity: 0;
+    }
+  }
+
+  /*  */
+
+  p {
+    animation-delay: 15s;
+    animation-duration: 80s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      transform: translateY(0%) ;
+     
+      
+    }
+  
+  
+    to {
+        transform: translateY(-100%) ;
+    }
+  }
